@@ -1,0 +1,34 @@
+package com.april.dogs;
+
+import lombok.Data;
+
+import lombok.Data;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Data // creates getters, setters, toString
+@Entity // object ready JPA storage
+public class Dogs
+{
+    private @Id @GeneratedValue Long id; // primary key automatically populated
+    private String id;
+    private String name;
+    private double  weight;
+    private boolean size;
+
+    // needed for JPA
+    public Dogs()
+    {
+        // default constructor
+    }
+
+    public Employee(String id, String name, boolean size, double weight)
+    {
+        this.id = id;
+        this.name = name;
+        this.size = size;
+        this.weight = weight;
+    }
+}
